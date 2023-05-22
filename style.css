@@ -1,0 +1,268 @@
+@font-face {
+    font-family: CG;
+    src: url(assets/Century\ Gothic.ttf);
+}
+
+@font-face {
+    font-family: SAONARA;
+    src: url(assets/MADE\ SAONARA\ PERSONAL\ USE.otf);
+}
+
+body{
+    background-color: rgb(220, 220, 220);
+    margin: 0;
+}
+
+#bg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(25, 25, 25);
+    background-image: url(assets/bg/bg.jpg), 
+                      url(assets/bg/bg1.jpg),
+                      url(assets/bg/bg2.jpg),
+                      url(assets/bg/bg3.jpg),
+                      url(assets/bg/bg4.jpg),
+                      url(assets/bg/bg5.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.makeactive{
+    animation: change infinite ease-in-out 20s alternate;
+}
+
+.noise{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/grain-min.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    transition: all 1s 10ms ease-in-out;
+}
+
+.door{
+    cursor: pointer;
+    width: 400px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    border: solid rgba(0, 0, 0, 0.8);
+    border-width: 7px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 50pt;
+    font-family: SAONARA;
+    font-weight: 500;
+    transition: all 250ms 10ms ease-in;
+    user-select: none;
+}
+
+.door .textcont{
+    font-family: CG;
+    font-size: 10pt;
+    margin-top: 5%;
+    letter-spacing: 2px;
+}
+
+.door:hover{
+    scale: 1.05;
+    border: solid whitesmoke 7px;
+    color: whitesmoke;
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5), inset 0 0 20px 2px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 1);
+}
+
+.door:hover .textcont{
+    text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+}
+
+.door:active{
+    scale: 1.025;
+}
+
+.nextbtn{
+    cursor: pointer;
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-family: CG;
+    font-size: 14pt;
+    border-radius: 5px;
+    z-index: 3;
+    transition: all 100ms 10ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nextbtn:hover{
+    scale: 1.2;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+#nbr{
+    top: 88%;
+    left: 88%;
+    transform: translate(-12%, -12%);
+}
+
+#nbl{
+    top: 88%;
+    right: 88%;
+    transform: translate(+12%, -12%);
+}
+
+#lyrics{
+    width: 0px;
+    opacity: 0;
+    visibility: hidden;
+    color: whitesmoke;
+    font-family: SAONARA;
+    font-size: 20pt;
+    letter-spacing: 2px;
+    margin-left: 0%;
+    text-align: justify;
+    text-justify: inter-word;
+    transition: all 500ms 10ms ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    #bg{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: rgb(25, 25, 25);
+        background-image: url(assets/bg/bg.jpg), 
+                          url(assets/bg/bg1.jpg),
+                          url(assets/bg/bg2.jpg),
+                          url(assets/bg/bg3.jpg),
+                          url(assets/bg/bg4.jpg),
+                          url(assets/bg/bg5.jpeg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .door{
+        cursor: pointer;
+        width: 280px;
+        height: 380px;
+        background: rgba(0, 0, 0, 0.8);
+        border: solid rgba(0, 0, 0, 0.8);
+        border-width: 7px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 36pt;
+        font-family: SAONARA;
+        font-weight: 500;
+        transition: all 250ms 10ms ease-in;
+        user-select: none;
+    }
+
+    .door .textcont{
+        font-family: CG;
+        font-size: 8pt;
+        margin-top: 5%;
+        letter-spacing: 2px;
+    }
+
+    .nextbtn{
+        cursor: pointer;
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        font-family: CG;
+        font-size: 12pt;
+        border-radius: 5px;
+        z-index: 3;
+        transition: all 100ms 10ms ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #nbr{
+        top: 85%;
+        left: 65%;
+        transform: translate(-35%, -15%);
+    }
+    
+    #nbl{
+        top: 85%;
+        right: 65%;
+        transform: translate(+35%, -15%);
+    }
+
+    #lyrics{
+        position: absolute;
+        top: 12%;
+        transform: translate(-0%, -78%);
+        width: 300 px;
+        opacity: 0;
+        visibility: hidden;
+        color: whitesmoke;
+        font-family: SAONARA;
+        font-size: 12pt;
+        letter-spacing: 2px;
+        text-align: justify;
+        text-justify: inter-word;
+        transition: all 500ms 10ms ease-in-out;
+    }
+}
+
+@keyframes change {
+    0% {
+        background-image: url(assets/bg/bg.jpg);
+    }
+    20% {
+        background-image: url(assets/bg/bg1.jpg);
+    }
+    40%{
+        background-image: url(assets/bg/bg2.jpg);
+    }
+    60%{
+        background-image: url(assets/bg/bg3.jpg);
+    }
+    80%{
+        background-image: url(assets/bg/bg4.jpg);
+    }
+    100%{
+        background-image: url(assets/bg/bg5.jpeg);
+    }
+}

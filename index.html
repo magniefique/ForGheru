@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>For Gheru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="bg"></div>
+    <div class="noise"></div>
+    <div class="nextbtn" id="nbr" onclick="autochangeMusic()">NEXT</div>
+    <div class="nextbtn" id="nbl" onclick="prevMusic()">PREVIOUS</div>
+    <div class="overlay" id="defbg">
+        <div class="door" id="door" onclick="activate(); playMusic();">FORGHERU
+            <div class="textcont" id="subt">inspired by THE1975</div>
+        </div>
+        <div id="lyrics"></div>
+    </div>
+    <audio id="bgm1" onended="autochangeMusic()">
+        <source src="assets/music/aboutyou.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bgm2" onended="autochangeMusic()">
+        <source src="assets/music/undo.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bgm3" onended="autochangeMusic()">
+        <source src="assets/music/fallingforyou.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bgm4" onended="autochangeMusic()">
+        <source src="assets/music/itsnotliving.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
